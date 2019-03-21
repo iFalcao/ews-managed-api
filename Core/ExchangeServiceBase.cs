@@ -472,7 +472,7 @@ namespace Microsoft.Exchange.WebServices.Data
         {
             if (this.RequestedServerVersion >= ExchangeVersion.Exchange2013_SP1)
             {
-                BasicAuthModuleForUTF8.InstantiateIfNeeded();
+                //BasicAuthModuleForUTF8.InstantiateIfNeeded();
             }
         }
 
