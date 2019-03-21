@@ -183,3 +183,6 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 /.vs/slnx.sqlite
+
+# Visual Studio Folder
+.vs/
