@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
-    <AssemblyName>iFalcao.Exchange.WebServices.NetStandard</AssemblyName>
+    <VersionPrefix>1.0.1</VersionPrefix>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <AssemblyName>Microsoft.Exchange.WebServices</AssemblyName>
     <PackageId>iFalcao.Exchange.WebServices.NetStandard</PackageId>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
@@ -22,31 +22,18 @@
     <Title>iFalcao.Exchange.WebServices.NetStandard</Title>
     <Description>The Exchange Web Services (EWS) Managed API provides a managed interface for developing .NET client applications that use EWS. By using the EWS Managed API, you can access almost all the information stored in an Office 365, Exchange Online, or Exchange Server mailbox.</Description>
     <PackageReleaseNotes>
-      fix project references to allow .NET Standard targeting
+      remove unused dependencies
     </PackageReleaseNotes>
   </PropertyGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Security" />
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="System.Security.Cryptography.Xml">
-      <Version>4.5.0</Version>
-    </PackageReference>
-  </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Credentials\BasicAuthModuleForUTF8.cs" />
   </ItemGroup>
-
+  
   <ItemGroup>
-    <PackageReference Include="System.DirectoryServices" Version="4.5.0" />
-    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
-    <PackageReference Include="System.Net.Http" Version="4.3.3" />
+      <PackageReference Include="System.DirectoryServices" Version="4.5.0" />
+      <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+      <PackageReference Include="System.Security.Cryptography.Xml" Version="4.5.0" />
   </ItemGroup>
 
 </Project>
